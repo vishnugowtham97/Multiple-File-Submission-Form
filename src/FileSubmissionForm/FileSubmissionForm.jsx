@@ -70,7 +70,7 @@ const FileSubmissionForm = () => {
       <h1 className="text-3xl font-bold text-gray-800 mb-6 text-center">
         Loan Wiser Assesment - File Submission Form
       </h1>
-     
+
       <div className="flex space-x-4 mb-6 overflow-x-auto">
         {applications.map((app, index) => (
           <button
@@ -134,9 +134,65 @@ const FileSubmissionForm = () => {
         </button>
       </div>
       {isPopupOpen && (
+        // <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        //   <div className="bg-white p-6 rounded-lg shadow-md w-1/2">
+        //     <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
+        //       {popupType === "addDocument" ? "Add Document" : "Add Application"}
+        //     </h3>
+
+        //     {popupType === "addDocument" && (
+        //       <>
+        //         <input
+        //           type="file"
+        //           onChange={handleFileChange}
+        //           className="w-full mb-4 p-2 border rounded-lg"
+        //         />
+        //         <div className="flex justify-end space-x-4">
+        //           <button
+        //             onClick={closePopup}
+        //             className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-all duration-300"
+        //           >
+        //             Cancel
+        //           </button>
+        //           <button
+        //             onClick={addDocument}
+        //             className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all duration-300"
+        //           >
+        //             Add
+        //           </button>
+        //         </div>
+        //       </>
+        //     )}
+
+        //     {popupType === "addApplication" && (
+        //       <>
+        //         <input
+        //           type="text"
+        //           placeholder="Application Name"
+        //           className="w-full mb-4 p-2 border rounded-lg"
+        //           onChange={(e) => setTempFile({ name: e.target.value })}
+        //         />
+        //         <div className="flex justify-end space-x-4">
+        //           <button
+        //             onClick={closePopup}
+        //             className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-all duration-300"
+        //           >
+        //             Cancel
+        //           </button>
+        //           <button
+        //             onClick={() => addApplication(tempFile.name)}
+        //             className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all duration-300"
+        //           >
+        //             Add
+        //           </button>
+        //         </div>
+        //       </>
+        //     )}
+        //   </div>
+        // </div>
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg shadow-md w-1/3">
-            <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
+          <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md w-full max-w-lg sm:w-full md:w-2/3 lg:w-1/2">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-4 text-center">
               {popupType === "addDocument" ? "Add Document" : "Add Application"}
             </h3>
 
@@ -147,16 +203,16 @@ const FileSubmissionForm = () => {
                   onChange={handleFileChange}
                   className="w-full mb-4 p-2 border rounded-lg"
                 />
-                <div className="flex justify-end space-x-4">
+                <div className="flex justify-end space-x-2 sm:space-x-4">
                   <button
                     onClick={closePopup}
-                    className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-all duration-300"
+                    className="px-3 py-2 sm:px-4 sm:py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-all duration-300"
                   >
                     Cancel
                   </button>
                   <button
                     onClick={addDocument}
-                    className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all duration-300"
+                    className="px-3 py-2 sm:px-4 sm:py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all duration-300"
                   >
                     Add
                   </button>
@@ -172,16 +228,16 @@ const FileSubmissionForm = () => {
                   className="w-full mb-4 p-2 border rounded-lg"
                   onChange={(e) => setTempFile({ name: e.target.value })}
                 />
-                <div className="flex justify-end space-x-4">
+                <div className="flex justify-end space-x-2 sm:space-x-4">
                   <button
                     onClick={closePopup}
-                    className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-all duration-300"
+                    className="px-3 py-2 sm:px-4 sm:py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-all duration-300"
                   >
                     Cancel
                   </button>
                   <button
                     onClick={() => addApplication(tempFile.name)}
-                    className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all duration-300"
+                    className="px-3 py-2 sm:px-4 sm:py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all duration-300"
                   >
                     Add
                   </button>
